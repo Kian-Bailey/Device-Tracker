@@ -22,8 +22,8 @@ Partial Class frmBookings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBookings))
         Me.grdBookings = New System.Windows.Forms.DataGridView()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -34,45 +34,52 @@ Partial Class frmBookings
         Me.deviceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lblBookings = New System.Windows.Forms.Label()
         Me.btnAddBooking = New System.Windows.Forms.Button()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.mnuNav = New System.Windows.Forms.MenuStrip()
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BookingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DevicesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.grdBookings, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MenuStrip1.SuspendLayout()
+        Me.mnuNav.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'grdBookings
         '
         Me.grdBookings.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.grdBookings.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Futura Bk BT", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdBookings.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Futura Bk BT", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdBookings.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
         Me.grdBookings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdBookings.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.dateStart, Me.dateEnd, Me.usedBy, Me.description, Me.deviceID})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Futura Bk BT", 16.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdBookings.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Futura Bk BT", 16.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdBookings.DefaultCellStyle = DataGridViewCellStyle18
         Me.grdBookings.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grdBookings.Location = New System.Drawing.Point(3, 253)
+        Me.grdBookings.Location = New System.Drawing.Point(3, 153)
         Me.grdBookings.Name = "grdBookings"
         Me.grdBookings.RowHeadersVisible = False
         Me.grdBookings.RowHeadersWidth = 82
         Me.grdBookings.RowTemplate.Height = 33
-        Me.grdBookings.Size = New System.Drawing.Size(1888, 711)
+        Me.grdBookings.Size = New System.Drawing.Size(1788, 453)
         Me.grdBookings.TabIndex = 2
         '
         'id
@@ -134,53 +141,64 @@ Partial Class frmBookings
         '
         Me.lblBookings.AutoSize = True
         Me.lblBookings.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblBookings.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold)
-        Me.lblBookings.Location = New System.Drawing.Point(3, 0)
+        Me.lblBookings.Font = New System.Drawing.Font("Futura Bk BT", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.lblBookings.ForeColor = System.Drawing.Color.Black
+        Me.lblBookings.Location = New System.Drawing.Point(20, 20)
+        Me.lblBookings.Margin = New System.Windows.Forms.Padding(20)
         Me.lblBookings.Name = "lblBookings"
-        Me.lblBookings.Size = New System.Drawing.Size(1888, 100)
+        Me.lblBookings.Size = New System.Drawing.Size(1754, 110)
         Me.lblBookings.TabIndex = 0
         Me.lblBookings.Text = "Bookings"
+        Me.lblBookings.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'btnAddBooking
         '
-        Me.btnAddBooking.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer))
+        Me.btnAddBooking.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.btnAddBooking.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnAddBooking.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddBooking.Location = New System.Drawing.Point(3, 103)
+        Me.btnAddBooking.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddBooking.Font = New System.Drawing.Font("Futura Bk BT", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddBooking.ForeColor = System.Drawing.Color.White
+        Me.btnAddBooking.Location = New System.Drawing.Point(150, 659)
+        Me.btnAddBooking.Margin = New System.Windows.Forms.Padding(150, 50, 150, 50)
         Me.btnAddBooking.Name = "btnAddBooking"
-        Me.btnAddBooking.Size = New System.Drawing.Size(1888, 144)
+        Me.btnAddBooking.Size = New System.Drawing.Size(1494, 100)
         Me.btnAddBooking.TabIndex = 1
         Me.btnAddBooking.Text = "Book a Device"
         Me.btnAddBooking.UseVisualStyleBackColor = False
         '
-        'MenuStrip1
+        'mnuNav
         '
-        Me.MenuStrip1.Font = New System.Drawing.Font("Futura Bk BT", 10.125!)
-        Me.MenuStrip1.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
-        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.BookingsToolStripMenuItem, Me.DevicesToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1894, 42)
-        Me.MenuStrip1.TabIndex = 3
-        Me.MenuStrip1.Text = "mnuNav"
+        Me.mnuNav.BackColor = System.Drawing.Color.Transparent
+        Me.mnuNav.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.mnuNav.Font = New System.Drawing.Font("Futura Bk BT", 10.125!)
+        Me.mnuNav.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
+        Me.mnuNav.ImageScalingSize = New System.Drawing.Size(32, 32)
+        Me.mnuNav.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.BookingsToolStripMenuItem, Me.DevicesToolStripMenuItem})
+        Me.mnuNav.Location = New System.Drawing.Point(200, 0)
+        Me.mnuNav.Name = "mnuNav"
+        Me.mnuNav.Size = New System.Drawing.Size(1588, 94)
+        Me.mnuNav.TabIndex = 3
+        Me.mnuNav.Text = "mnuNav"
         '
         'HomeToolStripMenuItem
         '
+        Me.HomeToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
-        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(105, 38)
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(105, 90)
         Me.HomeToolStripMenuItem.Text = "Home"
         '
         'BookingsToolStripMenuItem
         '
+        Me.BookingsToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.BookingsToolStripMenuItem.Name = "BookingsToolStripMenuItem"
-        Me.BookingsToolStripMenuItem.Size = New System.Drawing.Size(140, 38)
+        Me.BookingsToolStripMenuItem.Size = New System.Drawing.Size(140, 90)
         Me.BookingsToolStripMenuItem.Text = "Bookings"
         '
         'DevicesToolStripMenuItem
         '
+        Me.DevicesToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.DevicesToolStripMenuItem.Name = "DevicesToolStripMenuItem"
-        Me.DevicesToolStripMenuItem.Size = New System.Drawing.Size(124, 38)
+        Me.DevicesToolStripMenuItem.Size = New System.Drawing.Size(124, 90)
         Me.DevicesToolStripMenuItem.Text = "Devices"
         '
         'TableLayoutPanel1
@@ -188,36 +206,126 @@ Partial Class frmBookings
         Me.TableLayoutPanel1.ColumnCount = 1
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.lblBookings, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.grdBookings, 0, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnAddBooking, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.grdBookings, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.btnAddBooking, 0, 2)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 42)
+        Me.TableLayoutPanel1.ForeColor = System.Drawing.Color.Black
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(50, 150)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(50)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1894, 967)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 200.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1794, 809)
         Me.TableLayoutPanel1.TabIndex = 5
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.BackColor = System.Drawing.Color.Transparent
+        Me.TableLayoutPanel2.ColumnCount = 1
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel3, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel1, 0, 1)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel2.ForeColor = System.Drawing.Color.Transparent
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 2
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1894, 1009)
+        Me.TableLayoutPanel2.TabIndex = 6
+        '
+        'TableLayoutPanel3
+        '
+        Me.TableLayoutPanel3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TableLayoutPanel3.ColumnCount = 4
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
+        Me.TableLayoutPanel3.Controls.Add(Me.mnuNav)
+        Me.TableLayoutPanel3.Controls.Add(Me.Button3)
+        Me.TableLayoutPanel3.Controls.Add(Me.Button2, 1, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.Button1, 0, 0)
+        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 1
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(1888, 94)
+        Me.TableLayoutPanel3.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Futura Bk BT", 25.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(3, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(94, 88)
+        Me.Button1.TabIndex = 0
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Futura Bk BT", 25.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(103, 3)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(94, 88)
+        Me.Button2.TabIndex = 1
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Transparent
+        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Futura Bk BT", 25.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(1791, 3)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(94, 88)
+        Me.Button3.TabIndex = 2
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'frmBookings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1894, 1009)
-        Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.TableLayoutPanel2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MainMenuStrip = Me.MenuStrip1
+        Me.MainMenuStrip = Me.mnuNav
+        Me.MinimumSize = New System.Drawing.Size(1080, 1080)
         Me.Name = "frmBookings"
         Me.Text = "Bookings"
         CType(Me.grdBookings, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.mnuNav.ResumeLayout(False)
+        Me.mnuNav.PerformLayout()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel3.ResumeLayout(False)
+        Me.TableLayoutPanel3.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -230,9 +338,14 @@ Partial Class frmBookings
     Friend WithEvents usedBy As DataGridViewTextBoxColumn
     Friend WithEvents description As DataGridViewTextBoxColumn
     Friend WithEvents deviceID As DataGridViewTextBoxColumn
-    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents mnuNav As MenuStrip
     Friend WithEvents HomeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BookingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DevicesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

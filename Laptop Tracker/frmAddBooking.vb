@@ -73,8 +73,9 @@ Public Class frmAddBooking
             ResetFields()
             Exit Sub
         End If
-        Dim booking As New Bookings
-        booking.id = GetLastID("bookings.csv")
+        Dim booking As New Bookings With {
+            .id = GetLastID("bookings.csv")
+        }
         Dim sw As New StreamWriter("bookings.csv", True)
         With booking
             .dateStart = dtpStartDate.Value.Date

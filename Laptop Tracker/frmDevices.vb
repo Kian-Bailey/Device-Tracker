@@ -32,4 +32,6 @@ Public Class frmDevices
     Private Sub btnAddDevice_Click(sender As Object, e As EventArgs) Handles btnAddDevice.Click
         loadNewForm(Me, frmAddDevices)
     End Sub
+
+
 End Class

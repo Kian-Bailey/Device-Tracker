@@ -1,4 +1,4 @@
-﻿Imports Laptop_Tracker.modStructures
+﻿Imports Device_Tracker.modStructures
 
 Public Class frmHome 'Loads on start
     Private Sub frmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load

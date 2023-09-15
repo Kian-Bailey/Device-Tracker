@@ -61,22 +61,25 @@ Partial Class frmAddBooking
         '
         'btnSubmit
         '
+        Me.btnSubmit.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.btnSubmit.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnSubmit.Font = New System.Drawing.Font("Century Gothic", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSubmit.Font = New System.Drawing.Font("Futura Bk BT", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.btnSubmit.ForeColor = System.Drawing.Color.White
         Me.btnSubmit.Location = New System.Drawing.Point(3, 821)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(1888, 145)
         Me.btnSubmit.TabIndex = 13
         Me.btnSubmit.Text = "Submit"
-        Me.btnSubmit.UseVisualStyleBackColor = True
+        Me.btnSubmit.UseVisualStyleBackColor = False
         '
         'lblUsage
         '
         Me.lblUsage.AutoSize = True
-        Me.lblUsage.Font = New System.Drawing.Font("Century Gothic", 20.0!)
+        Me.lblUsage.Font = New System.Drawing.Font("Futura Bk BT", 20.0!)
         Me.lblUsage.Location = New System.Drawing.Point(3, 420)
         Me.lblUsage.Name = "lblUsage"
-        Me.lblUsage.Size = New System.Drawing.Size(214, 65)
+        Me.lblUsage.Size = New System.Drawing.Size(184, 65)
         Me.lblUsage.TabIndex = 7
         Me.lblUsage.Text = "Device"
         '
@@ -84,7 +87,7 @@ Partial Class frmAddBooking
         '
         Me.lblSerialNumber.AutoSize = True
         Me.lblSerialNumber.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblSerialNumber.Font = New System.Drawing.Font("Century Gothic", 20.0!)
+        Me.lblSerialNumber.Font = New System.Drawing.Font("Futura Bk BT", 20.0!)
         Me.lblSerialNumber.Location = New System.Drawing.Point(3, 0)
         Me.lblSerialNumber.Name = "lblSerialNumber"
         Me.lblSerialNumber.Size = New System.Drawing.Size(371, 137)
@@ -94,16 +97,16 @@ Partial Class frmAddBooking
         'txtDescription
         '
         Me.txtDescription.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtDescription.Font = New System.Drawing.Font("Century Gothic", 20.0!)
+        Me.txtDescription.Font = New System.Drawing.Font("Futura Bk BT", 20.0!)
         Me.txtDescription.Location = New System.Drawing.Point(380, 3)
         Me.txtDescription.Name = "txtDescription"
-        Me.txtDescription.Size = New System.Drawing.Size(1505, 73)
+        Me.txtDescription.Size = New System.Drawing.Size(1505, 71)
         Me.txtDescription.TabIndex = 11
         '
         'lblDeviceName
         '
         Me.lblDeviceName.AutoSize = True
-        Me.lblDeviceName.Font = New System.Drawing.Font("Century Gothic", 20.0!)
+        Me.lblDeviceName.Font = New System.Drawing.Font("Futura Bk BT", 20.0!)
         Me.lblDeviceName.Location = New System.Drawing.Point(3, 280)
         Me.lblDeviceName.Name = "lblDeviceName"
         Me.lblDeviceName.Size = New System.Drawing.Size(136, 65)
@@ -112,58 +115,58 @@ Partial Class frmAddBooking
         '
         'txtUser
         '
-        Me.txtUser.Font = New System.Drawing.Font("Century Gothic", 20.0!)
+        Me.txtUser.Font = New System.Drawing.Font("Futura Bk BT", 20.0!)
         Me.txtUser.Location = New System.Drawing.Point(472, 283)
         Me.txtUser.Name = "txtUser"
-        Me.txtUser.Size = New System.Drawing.Size(334, 73)
+        Me.txtUser.Size = New System.Drawing.Size(334, 71)
         Me.txtUser.TabIndex = 6
         '
         'lblDeviceModel
         '
         Me.lblDeviceModel.AutoSize = True
-        Me.lblDeviceModel.Font = New System.Drawing.Font("Century Gothic", 20.0!)
+        Me.lblDeviceModel.Font = New System.Drawing.Font("Futura Bk BT", 20.0!)
         Me.lblDeviceModel.Location = New System.Drawing.Point(3, 140)
         Me.lblDeviceModel.Name = "lblDeviceModel"
-        Me.lblDeviceModel.Size = New System.Drawing.Size(272, 65)
+        Me.lblDeviceModel.Size = New System.Drawing.Size(245, 65)
         Me.lblDeviceModel.TabIndex = 3
         Me.lblDeviceModel.Text = "End Date"
         '
         'lblDeviceID
         '
         Me.lblDeviceID.AutoSize = True
-        Me.lblDeviceID.Font = New System.Drawing.Font("Century Gothic", 20.0!)
+        Me.lblDeviceID.Font = New System.Drawing.Font("Futura Bk BT", 20.0!)
         Me.lblDeviceID.Location = New System.Drawing.Point(3, 0)
         Me.lblDeviceID.Name = "lblDeviceID"
-        Me.lblDeviceID.Size = New System.Drawing.Size(289, 65)
+        Me.lblDeviceID.Size = New System.Drawing.Size(262, 65)
         Me.lblDeviceID.TabIndex = 1
         Me.lblDeviceID.Text = "Start Date"
         '
         'lblBookDevice
         '
         Me.lblBookDevice.AutoSize = True
-        Me.lblBookDevice.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.lblBookDevice.Font = New System.Drawing.Font("Futura Bk BT", 24.0!, System.Drawing.FontStyle.Bold)
         Me.lblBookDevice.Location = New System.Drawing.Point(3, 0)
         Me.lblBookDevice.Name = "lblBookDevice"
-        Me.lblBookDevice.Size = New System.Drawing.Size(486, 77)
+        Me.lblBookDevice.Size = New System.Drawing.Size(446, 77)
         Me.lblBookDevice.TabIndex = 0
         Me.lblBookDevice.Text = "Book a Device"
         '
         'dtpStartDate
         '
-        Me.dtpStartDate.Font = New System.Drawing.Font("Century Gothic", 20.0!)
+        Me.dtpStartDate.Font = New System.Drawing.Font("Futura Bk BT", 20.0!)
         Me.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpStartDate.Location = New System.Drawing.Point(472, 3)
         Me.dtpStartDate.Name = "dtpStartDate"
-        Me.dtpStartDate.Size = New System.Drawing.Size(334, 73)
+        Me.dtpStartDate.Size = New System.Drawing.Size(334, 71)
         Me.dtpStartDate.TabIndex = 2
         '
         'dtpEndDate
         '
-        Me.dtpEndDate.Font = New System.Drawing.Font("Century Gothic", 20.0!)
+        Me.dtpEndDate.Font = New System.Drawing.Font("Futura Bk BT", 20.0!)
         Me.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpEndDate.Location = New System.Drawing.Point(472, 143)
         Me.dtpEndDate.Name = "dtpEndDate"
-        Me.dtpEndDate.Size = New System.Drawing.Size(334, 73)
+        Me.dtpEndDate.Size = New System.Drawing.Size(334, 71)
         Me.dtpEndDate.TabIndex = 4
         '
         'grdDevices
@@ -190,7 +193,7 @@ Partial Class frmAddBooking
         Me.id.MinimumWidth = 50
         Me.id.Name = "id"
         Me.id.ReadOnly = True
-        Me.id.Width = 76
+        Me.id.Width = 77
         '
         'model
         '
@@ -199,7 +202,7 @@ Partial Class frmAddBooking
         Me.model.MinimumWidth = 100
         Me.model.Name = "model"
         Me.model.ReadOnly = True
-        Me.model.Width = 121
+        Me.model.Width = 115
         '
         'deviceName
         '
@@ -208,7 +211,7 @@ Partial Class frmAddBooking
         Me.deviceName.MinimumWidth = 100
         Me.deviceName.Name = "deviceName"
         Me.deviceName.ReadOnly = True
-        Me.deviceName.Width = 120
+        Me.deviceName.Width = 114
         '
         'serialNumber
         '
@@ -217,26 +220,26 @@ Partial Class frmAddBooking
         Me.serialNumber.MinimumWidth = 100
         Me.serialNumber.Name = "serialNumber"
         Me.serialNumber.ReadOnly = True
-        Me.serialNumber.Width = 181
+        Me.serialNumber.Width = 189
         '
         'txtDeviceID
         '
         Me.txtDeviceID.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtDeviceID.Enabled = False
-        Me.txtDeviceID.Font = New System.Drawing.Font("Century Gothic", 20.0!)
+        Me.txtDeviceID.Font = New System.Drawing.Font("Futura Bk BT", 20.0!)
         Me.txtDeviceID.Location = New System.Drawing.Point(3, 3)
         Me.txtDeviceID.Name = "txtDeviceID"
-        Me.txtDeviceID.Size = New System.Drawing.Size(74, 73)
+        Me.txtDeviceID.Size = New System.Drawing.Size(74, 71)
         Me.txtDeviceID.TabIndex = 9
         '
         'txtDeviceName
         '
         Me.txtDeviceName.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtDeviceName.Enabled = False
-        Me.txtDeviceName.Font = New System.Drawing.Font("Century Gothic", 20.0!)
+        Me.txtDeviceName.Font = New System.Drawing.Font("Futura Bk BT", 20.0!)
         Me.txtDeviceName.Location = New System.Drawing.Point(83, 3)
         Me.txtDeviceName.Name = "txtDeviceName"
-        Me.txtDeviceName.Size = New System.Drawing.Size(377, 73)
+        Me.txtDeviceName.Size = New System.Drawing.Size(377, 71)
         Me.txtDeviceName.TabIndex = 10
         '
         'mnuNav
@@ -360,12 +363,12 @@ Partial Class frmAddBooking
         '
         'frmAddBooking
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1894, 1009)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.mnuNav)
-        Me.Font = New System.Drawing.Font("Century Gothic", 7.875!)
+        Me.Font = New System.Drawing.Font("Futura Bk BT", 7.875!)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmAddBooking"
         Me.Text = "Add Booking"
