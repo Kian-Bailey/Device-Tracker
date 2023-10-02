@@ -5,7 +5,7 @@ Public Class frmAddBooking
         ResetFields()
     End Sub
 
-    Sub ResetFields() 'resets all input fields and loads default values
+    Private Sub ResetFields() 'resets all input fields and loads default values
         dtpStartDate.Value = Date.Today
         dtpEndDate.Value = DateAdd("ww", 1, Date.Today)
         txtUser.Text = ""
@@ -15,7 +15,7 @@ Public Class frmAddBooking
         GetDevices()
     End Sub
 
-    Sub GetDevices() 'Retrieves devices and populates the grid
+    Private Sub GetDevices() 'Retrieves devices and populates the grid
         grdDevices.Rows.Clear()
         If dtpStartDate.Text <> "" And dtpEndDate.Text <> "" Then 'Checks if date fields are not empty
             Dim deviceFileLength = File.ReadAllLines("devices.csv").Length
@@ -84,7 +84,7 @@ Public Class frmAddBooking
             .description = txtDescription.Text.Replace(",", "&comma;")
             .deviceID = txtDeviceID.Text
             'Converts the fields into a formatted string
-            Dim lineOutput As String = ($"{ .id},{ .dateStart},{ .dateEnd},{ .usedBy },{ .description},{ .deviceID}")
+            Dim lineOutput As String = $"{ .id},{ .dateStart},{ .dateEnd},{ .usedBy },{ .description},{ .deviceID}"
             sw.WriteLine(lineOutput) 'Writes the line to the file
         End With
 
@@ -107,34 +107,32 @@ Public Class frmAddBooking
         dateUpdated()
     End Sub
 
-    Sub dateUpdated()
+    Private Sub dateUpdated()
         If dtpEndDate.Value.Date < dtpStartDate.Value.Date Then 'Stops end date from being before the start date
             dtpEndDate.Value = dtpStartDate.Value
             MsgBox("The booking end date msut be after the start date", vbCritical, "Error")
         End If
         grdDevices.ClearSelection()
-        getDevices()
+        GetDevices()
 
     End Sub
 
     Private Sub DevicesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DevicesToolStripMenuItem.Click
-        navStackPrev.Push(Me.GetType)
+        navStackPrev.Push([GetType])
+        navStackNext.Clear()
         loadNewForm(Me, frmDevices)
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        navStackPrev.Push(Me.GetType)
+        navStackPrev.Push([GetType])
+        navStackNext.Clear()
         loadNewForm(Me, frmHome)
     End Sub
 
     Private Sub BookingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BookingsToolStripMenuItem.Click
-        navStackPrev.Push(Me.GetType)
+        navStackPrev.Push([GetType])
+        navStackNext.Clear()
         loadNewForm(Me, frmBookings)
-    End Sub
-
-    Private Sub mnuNav_ItemClicked(sender As Object, e As EventArgs) Handles mnuNav.ItemClicked
-        navStackPrev.Push(Me.GetType)
-        navStackPrev.Push(Me.GetType)
     End Sub
 
     Private Sub btnNavPrev_Click(sender As Object, e As EventArgs) Handles btnNavPrev.Click
@@ -150,15 +148,17 @@ Public Class frmAddBooking
             If navStackPrev.Count < 1 Then
                 .Enabled = False
                 .BackColor = Color.Gray
+                navStackPrev.Clear()
             Else
                 .Enabled = True
                 .BackColor = Color.FromArgb(44, 158, 221)
             End If
         End With
         With btnNavNext
-            If navStackNext.Count = 0 OrElse navStackNext.Peek.Name = Me.Name Then
+            If navStackNext.Count = 0 OrElse navStackNext.Peek.Name = Name Then
                 .Enabled = False
                 .BackColor = Color.Gray
+                navStackNext.Clear()
             Else
                 .Enabled = True
                 .BackColor = Color.FromArgb(44, 158, 221)

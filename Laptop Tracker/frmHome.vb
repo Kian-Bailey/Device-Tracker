@@ -1,11 +1,13 @@
 ﻿Public Class frmHome
     Private Sub btnDevices_Click(sender As Object, e As EventArgs) Handles btnDevices.Click
-        navStackPrev.Push(Me.GetType)
+        navStackPrev.Push([GetType])
+        navStackNext.Clear()
         loadNewForm(Me, frmDevices)
     End Sub
 
     Private Sub btnBookings_Click(sender As Object, e As EventArgs) Handles btnBookings.Click
-        navStackPrev.Push(Me.GetType)
+        navStackPrev.Push([GetType])
+        navStackNext.Clear()
         loadNewForm(Me, frmBookings)
     End Sub
 
@@ -14,15 +16,17 @@
             If navStackPrev.Count < 1 Then
                 .Enabled = False
                 .BackColor = Color.Gray
+                navStackPrev.Clear()
             Else
                 .Enabled = True
                 .BackColor = Color.FromArgb(44, 158, 221)
             End If
         End With
         With btnNavNext
-            If navStackNext.Count = 0 OrElse navStackNext.Peek.Name = Me.Name Then
+            If navStackNext.Count = 0 OrElse navStackNext.Peek.Name = Name Then
                 .Enabled = False
                 .BackColor = Color.Gray
+                navStackNext.Clear()
             Else
                 .Enabled = True
                 .BackColor = Color.FromArgb(44, 158, 221)
@@ -39,12 +43,14 @@
     End Sub
 
     Private Sub BookingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BookingsToolStripMenuItem.Click
-        navStackPrev.Push(Me.GetType)
+        navStackPrev.Push([GetType])
+        navStackNext.Clear()
         loadNewForm(Me, frmBookings)
     End Sub
 
     Private Sub DevicesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DevicesToolStripMenuItem.Click
-        navStackPrev.Push(Me.GetType)
+        navStackPrev.Push([GetType])
+        navStackNext.Clear()
         loadNewForm(Me, frmDevices)
     End Sub
 End Class

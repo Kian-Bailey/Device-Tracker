@@ -20,7 +20,7 @@ Public Class frmAddDevices
             .usage = comUsage.Text.Replace(",", "&comma;")
 
             'Converts the fields into a formatted string
-            Dim lineOutput As String = ($"{ .id },{ .model },{ .name },{ .serialNumber },{ .usage}")
+            Dim lineOutput As String = $"{ .id },{ .model },{ .name },{ .serialNumber },{ .usage}"
             sw.WriteLine(lineOutput) 'Writes the line to the file
 
 
@@ -33,7 +33,8 @@ Public Class frmAddDevices
     Private Sub frmAddDevices_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         resetFields()
     End Sub
-    Sub resetFields() 'resets all input fields and loads default values
+
+    Private Sub resetFields() 'resets all input fields and loads default values
         txtDeviceID.Text = GetLastID("devices.csv")
         txtModel.Text = ""
         txtName.Text = ""
@@ -42,17 +43,17 @@ Public Class frmAddDevices
     End Sub
 
     Private Sub DevicesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DevicesToolStripMenuItem.Click
-        navStackPrev.Push(Me.GetType)
+        navStackPrev.Push([GetType])
         loadNewForm(Me, frmDevices)
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        navStackPrev.Push(Me.GetType)
+        navStackPrev.Push([GetType])
         loadNewForm(Me, frmHome)
     End Sub
 
     Private Sub BookingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BookingsToolStripMenuItem.Click
-        navStackPrev.Push(Me.GetType)
+        navStackPrev.Push([GetType])
         loadNewForm(Me, frmBookings)
     End Sub
 
@@ -69,15 +70,17 @@ Public Class frmAddDevices
             If navStackPrev.Count < 1 Then
                 .Enabled = False
                 .BackColor = Color.Gray
+                navStackPrev.Clear()
             Else
                 .Enabled = True
                 .BackColor = Color.FromArgb(44, 158, 221)
             End If
         End With
         With btnNavNext
-            If navStackNext.Count = 0 OrElse navStackNext.Peek.Name = Me.Name Then
+            If navStackNext.Count = 0 OrElse navStackNext.Peek.Name = Name Then
                 .Enabled = False
                 .BackColor = Color.Gray
+                navStackNext.Clear()
             Else
                 .Enabled = True
                 .BackColor = Color.FromArgb(44, 158, 221)

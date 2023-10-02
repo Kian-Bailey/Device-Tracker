@@ -1,27 +1,28 @@
 ﻿Imports System.IO
-Module modStructures
 
-    Structure Devices 'Structure to hold device information
-        Dim id As Integer
-        Dim model As String
-        Dim name As String
-        Dim serialNumber As String
-        Dim usage As String
+Friend Module GlobalStructures
+    Public Structure Devices 'Structure to hold device information
+        Public id As Integer
+        Public model As String
+        Public name As String
+        Public serialNumber As String
+        Public usage As String
     End Structure
 
-    Structure Bookings ' Structure to hold booking information
-        Dim id As Integer
-        Dim dateStart As Date
-        Dim dateEnd As Date
-        Dim usedBy As String
-        Dim description As String
-        Dim deviceID As Integer
+    Public Structure Bookings ' Structure to hold booking information
+        Public id As Integer
+        Public dateStart As Date
+        Public dateEnd As Date
+        Public usedBy As String
+        Public description As String
+        Public deviceID As Integer
     End Structure
-
+End Module
+Friend Module GlobalFunctions
     Public Function GetLastID(filename As String) 'gets last ID from a file and returns the next value
         Dim lastLine = File.ReadLines(filename).Last()
         Dim lastLineSplit As String() = lastLine.Split(",")
-        Return (lastLineSplit(0) + 1)
+        Return lastLineSplit(0) + 1
     End Function
 
     Public Sub loadNewForm(previousForm, newForm) 'loads a new form while preserving the previous form's state
