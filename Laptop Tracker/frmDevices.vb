@@ -22,16 +22,46 @@ Public Class frmDevices
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        navStackPrev.Push(Me.GetType)
         loadNewForm(Me, frmHome)
     End Sub
 
     Private Sub BookingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BookingsToolStripMenuItem.Click
+        navStackPrev.Push(Me.GetType)
         loadNewForm(Me, frmBookings)
     End Sub
 
     Private Sub btnAddDevice_Click(sender As Object, e As EventArgs) Handles btnAddDevice.Click
+        navStackPrev.Push(Me.GetType)
         loadNewForm(Me, frmAddDevices)
     End Sub
 
+    Private Sub btnNavPrev_Click(sender As Object, e As EventArgs) Handles btnNavPrev.Click
+        NavigationFunctions.btnNavPrev_Click(Me)
+    End Sub
 
+    Private Sub btnNavNext_Click(sender As Object, e As EventArgs) Handles btnNavNext.Click
+        NavigationFunctions.btnNavNext_Click(Me)
+    End Sub
+
+    Public Sub updateNavButtons()
+        With btnNavPrev
+            If navStackPrev.Count < 1 Then
+                .Enabled = False
+                .BackColor = Color.Gray
+            Else
+                .Enabled = True
+                .BackColor = Color.FromArgb(44, 158, 221)
+            End If
+        End With
+        With btnNavNext
+            If navStackNext.Count = 0 OrElse navStackNext.Peek.Name = Me.Name Then
+                .Enabled = False
+                .BackColor = Color.Gray
+            Else
+                .Enabled = True
+                .BackColor = Color.FromArgb(44, 158, 221)
+            End If
+        End With
+    End Sub
 End Class

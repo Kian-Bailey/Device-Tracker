@@ -1,32 +1,50 @@
-﻿Imports Device_Tracker.modStructures
-
-Public Class frmHome 'Loads on start
-    Private Sub frmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Launch application in maximized state if screen width is not greater than 1080px
-        If Screen.PrimaryScreen.Bounds.Height > 1080 Then
-            Width = Screen.PrimaryScreen.Bounds.Width * 0.75
-            Height = Screen.PrimaryScreen.Bounds.Height * 0.75
-            WindowState = FormWindowState.Normal
-        Else
-            WindowState = FormWindowState.Maximized
-        End If
-
-        'Create files if they don't already exist
-        If Dir("bookings.csv") <> "" Then
-            FileOpen(1, "bookings.csv", OpenMode.Append) 'Create
-            FileClose(1)
-        End If
-        If Dir("devices.csv") <> "" Then
-            FileOpen(1, "devices.csv", OpenMode.Append)
-            FileClose(1)
-        End If
-
-    End Sub
+﻿Public Class frmHome
     Private Sub btnDevices_Click(sender As Object, e As EventArgs) Handles btnDevices.Click
+        navStackPrev.Push(Me.GetType)
         loadNewForm(Me, frmDevices)
     End Sub
 
     Private Sub btnBookings_Click(sender As Object, e As EventArgs) Handles btnBookings.Click
+        navStackPrev.Push(Me.GetType)
         loadNewForm(Me, frmBookings)
+    End Sub
+
+    Public Sub updateNavButtons()
+        With btnNavPrev
+            If navStackPrev.Count < 1 Then
+                .Enabled = False
+                .BackColor = Color.Gray
+            Else
+                .Enabled = True
+                .BackColor = Color.FromArgb(44, 158, 221)
+            End If
+        End With
+        With btnNavNext
+            If navStackNext.Count = 0 OrElse navStackNext.Peek.Name = Me.Name Then
+                .Enabled = False
+                .BackColor = Color.Gray
+            Else
+                .Enabled = True
+                .BackColor = Color.FromArgb(44, 158, 221)
+            End If
+        End With
+    End Sub
+
+    Private Sub btnNavPrev_Click(sender As Object, e As EventArgs) Handles btnNavPrev.Click
+        NavigationFunctions.btnNavPrev_Click(Me)
+    End Sub
+
+    Private Sub btnNavNext_Click(sender As Object, e As EventArgs) Handles btnNavNext.Click
+        NavigationFunctions.btnNavNext_Click(Me)
+    End Sub
+
+    Private Sub BookingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BookingsToolStripMenuItem.Click
+        navStackPrev.Push(Me.GetType)
+        loadNewForm(Me, frmBookings)
+    End Sub
+
+    Private Sub DevicesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DevicesToolStripMenuItem.Click
+        navStackPrev.Push(Me.GetType)
+        loadNewForm(Me, frmDevices)
     End Sub
 End Class

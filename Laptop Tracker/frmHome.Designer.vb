@@ -27,13 +27,13 @@ Partial Class frmHome
         Me.btnDevices = New System.Windows.Forms.Button()
         Me.btnBookings = New System.Windows.Forms.Button()
         Me.tlpNav = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnNavPrev = New System.Windows.Forms.Button()
         Me.mnuNav = New System.Windows.Forms.MenuStrip()
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BookingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DevicesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnNavNext = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.tlpNav.SuspendLayout()
         Me.mnuNav.SuspendLayout()
@@ -44,7 +44,6 @@ Partial Class frmHome
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnDevices, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.btnBookings, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -53,7 +52,7 @@ Partial Class frmHome
         Me.TableLayoutPanel1.Padding = New System.Windows.Forms.Padding(100)
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 300.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(1894, 1009)
         Me.TableLayoutPanel1.TabIndex = 2
@@ -65,10 +64,10 @@ Partial Class frmHome
         Me.btnDevices.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDevices.Font = New System.Drawing.Font("Futura Bk BT", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDevices.ForeColor = System.Drawing.Color.White
-        Me.btnDevices.Location = New System.Drawing.Point(967, 449)
+        Me.btnDevices.Location = New System.Drawing.Point(967, 374)
         Me.btnDevices.Margin = New System.Windows.Forms.Padding(20)
         Me.btnDevices.Name = "btnDevices"
-        Me.btnDevices.Size = New System.Drawing.Size(807, 110)
+        Me.btnDevices.Size = New System.Drawing.Size(807, 260)
         Me.btnDevices.TabIndex = 1
         Me.btnDevices.Text = "Devices"
         Me.btnDevices.UseVisualStyleBackColor = False
@@ -81,10 +80,10 @@ Partial Class frmHome
         Me.btnBookings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBookings.Font = New System.Drawing.Font("Futura Bk BT", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBookings.ForeColor = System.Drawing.Color.White
-        Me.btnBookings.Location = New System.Drawing.Point(120, 449)
+        Me.btnBookings.Location = New System.Drawing.Point(120, 374)
         Me.btnBookings.Margin = New System.Windows.Forms.Padding(20)
         Me.btnBookings.Name = "btnBookings"
-        Me.btnBookings.Size = New System.Drawing.Size(807, 110)
+        Me.btnBookings.Size = New System.Drawing.Size(807, 260)
         Me.btnBookings.TabIndex = 0
         Me.btnBookings.Text = "Bookings"
         Me.btnBookings.UseVisualStyleBackColor = False
@@ -97,10 +96,10 @@ Partial Class frmHome
         Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
         Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
-        Me.tlpNav.Controls.Add(Me.Button1, 0, 0)
+        Me.tlpNav.Controls.Add(Me.btnNavPrev, 0, 0)
         Me.tlpNav.Controls.Add(Me.mnuNav, 2, 0)
         Me.tlpNav.Controls.Add(Me.Button3, 3, 0)
-        Me.tlpNav.Controls.Add(Me.Button2, 1, 0)
+        Me.tlpNav.Controls.Add(Me.btnNavNext, 1, 0)
         Me.tlpNav.Dock = System.Windows.Forms.DockStyle.Top
         Me.tlpNav.Location = New System.Drawing.Point(0, 0)
         Me.tlpNav.Name = "tlpNav"
@@ -109,21 +108,21 @@ Partial Class frmHome
         Me.tlpNav.Size = New System.Drawing.Size(1894, 94)
         Me.tlpNav.TabIndex = 3
         '
-        'Button1
+        'btnNavPrev
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Futura Bk BT", 25.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(3, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 88)
-        Me.Button1.TabIndex = 0
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnNavPrev.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.btnNavPrev.BackgroundImage = CType(resources.GetObject("btnNavPrev.BackgroundImage"), System.Drawing.Image)
+        Me.btnNavPrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnNavPrev.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnNavPrev.FlatAppearance.BorderSize = 0
+        Me.btnNavPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNavPrev.Font = New System.Drawing.Font("Futura Bk BT", 25.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNavPrev.ForeColor = System.Drawing.Color.White
+        Me.btnNavPrev.Location = New System.Drawing.Point(3, 3)
+        Me.btnNavPrev.Name = "btnNavPrev"
+        Me.btnNavPrev.Size = New System.Drawing.Size(94, 88)
+        Me.btnNavPrev.TabIndex = 0
+        Me.btnNavPrev.UseVisualStyleBackColor = False
         '
         'mnuNav
         '
@@ -177,26 +176,26 @@ Partial Class frmHome
         Me.Button3.TabIndex = 2
         Me.Button3.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnNavNext
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Futura Bk BT", 25.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(103, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(94, 88)
-        Me.Button2.TabIndex = 1
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnNavNext.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.btnNavNext.BackgroundImage = CType(resources.GetObject("btnNavNext.BackgroundImage"), System.Drawing.Image)
+        Me.btnNavNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnNavNext.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnNavNext.FlatAppearance.BorderSize = 0
+        Me.btnNavNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNavNext.Font = New System.Drawing.Font("Futura Bk BT", 25.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNavNext.ForeColor = System.Drawing.Color.White
+        Me.btnNavNext.Location = New System.Drawing.Point(103, 3)
+        Me.btnNavNext.Name = "btnNavNext"
+        Me.btnNavNext.Size = New System.Drawing.Size(94, 88)
+        Me.btnNavNext.TabIndex = 1
+        Me.btnNavNext.UseVisualStyleBackColor = False
         '
         'frmHome
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(192.0!, 192.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1894, 1009)
         Me.Controls.Add(Me.tlpNav)
@@ -220,11 +219,11 @@ Partial Class frmHome
     Friend WithEvents btnBookings As Button
     Friend WithEvents btnDevices As Button
     Friend WithEvents tlpNav As TableLayoutPanel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnNavPrev As Button
     Friend WithEvents mnuNav As MenuStrip
     Friend WithEvents HomeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BookingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DevicesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnNavNext As Button
 End Class

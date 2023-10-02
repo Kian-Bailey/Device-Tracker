@@ -22,8 +22,8 @@ Partial Class frmDevices
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDevices))
         Me.btnAddDevice = New System.Windows.Forms.Button()
         Me.grdDevices = New System.Windows.Forms.DataGridView()
@@ -37,9 +37,9 @@ Partial Class frmDevices
         Me.BookingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DevicesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tlpNav = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnNavPrev = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnNavNext = New System.Windows.Forms.Button()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.lblDevices = New System.Windows.Forms.Label()
         CType(Me.grdDevices, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,24 +68,24 @@ Partial Class frmDevices
         '
         Me.grdDevices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.grdDevices.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Futura Bk BT", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdDevices.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Futura Bk BT", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdDevices.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.grdDevices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdDevices.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.model, Me.deviceName, Me.serialNumber, Me.status})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Futura Bk BT", 16.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdDevices.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Futura Bk BT", 16.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdDevices.DefaultCellStyle = DataGridViewCellStyle4
         Me.grdDevices.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grdDevices.Location = New System.Drawing.Point(53, 203)
         Me.grdDevices.Name = "grdDevices"
@@ -187,10 +187,10 @@ Partial Class frmDevices
         Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
         Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
-        Me.tlpNav.Controls.Add(Me.Button1, 0, 0)
+        Me.tlpNav.Controls.Add(Me.btnNavPrev, 0, 0)
         Me.tlpNav.Controls.Add(Me.mnuNav, 2, 0)
         Me.tlpNav.Controls.Add(Me.Button3, 3, 0)
-        Me.tlpNav.Controls.Add(Me.Button2, 1, 0)
+        Me.tlpNav.Controls.Add(Me.btnNavNext, 1, 0)
         Me.tlpNav.Dock = System.Windows.Forms.DockStyle.Top
         Me.tlpNav.Location = New System.Drawing.Point(0, 0)
         Me.tlpNav.Name = "tlpNav"
@@ -199,21 +199,21 @@ Partial Class frmDevices
         Me.tlpNav.Size = New System.Drawing.Size(1894, 94)
         Me.tlpNav.TabIndex = 0
         '
-        'Button1
+        'btnNavPrev
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Futura Bk BT", 25.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(3, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 88)
-        Me.Button1.TabIndex = 0
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnNavPrev.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.btnNavPrev.BackgroundImage = CType(resources.GetObject("btnNavPrev.BackgroundImage"), System.Drawing.Image)
+        Me.btnNavPrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnNavPrev.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnNavPrev.FlatAppearance.BorderSize = 0
+        Me.btnNavPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNavPrev.Font = New System.Drawing.Font("Futura Bk BT", 25.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNavPrev.ForeColor = System.Drawing.Color.White
+        Me.btnNavPrev.Location = New System.Drawing.Point(3, 3)
+        Me.btnNavPrev.Name = "btnNavPrev"
+        Me.btnNavPrev.Size = New System.Drawing.Size(94, 88)
+        Me.btnNavPrev.TabIndex = 0
+        Me.btnNavPrev.UseVisualStyleBackColor = False
         '
         'Button3
         '
@@ -231,21 +231,21 @@ Partial Class frmDevices
         Me.Button3.TabIndex = 2
         Me.Button3.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnNavNext
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Futura Bk BT", 25.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(103, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(94, 88)
-        Me.Button2.TabIndex = 1
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnNavNext.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.btnNavNext.BackgroundImage = CType(resources.GetObject("btnNavNext.BackgroundImage"), System.Drawing.Image)
+        Me.btnNavNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnNavNext.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnNavNext.FlatAppearance.BorderSize = 0
+        Me.btnNavNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNavNext.Font = New System.Drawing.Font("Futura Bk BT", 25.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNavNext.ForeColor = System.Drawing.Color.White
+        Me.btnNavNext.Location = New System.Drawing.Point(103, 3)
+        Me.btnNavNext.Name = "btnNavNext"
+        Me.btnNavNext.Size = New System.Drawing.Size(94, 88)
+        Me.btnNavNext.TabIndex = 1
+        Me.btnNavNext.UseVisualStyleBackColor = False
         '
         'TableLayoutPanel4
         '
@@ -283,8 +283,8 @@ Partial Class frmDevices
         '
         'frmDevices
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(192.0!, 192.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1894, 1009)
         Me.Controls.Add(Me.TableLayoutPanel4)
@@ -318,8 +318,8 @@ Partial Class frmDevices
     Friend WithEvents DevicesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents tlpNav As TableLayoutPanel
     Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnNavNext As Button
+    Friend WithEvents btnNavPrev As Button
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents lblDevices As Label
 End Class

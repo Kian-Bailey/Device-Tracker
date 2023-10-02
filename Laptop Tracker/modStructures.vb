@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Module modStructures
+
     Structure Devices 'Structure to hold device information
         Dim id As Integer
         Dim model As String
@@ -32,6 +33,25 @@ Module modStructures
             .Left = previousForm.Left
             .Top = previousForm.Top
         End With
-        previousForm.Close()
+        previousForm.close()
+        newForm.updateNavButtons()
     End Sub
+
+    Public navStackPrev As New Stack(Of Type)
+    Public navStackNext As New Stack(Of Type)
+
+    Public Class NavigationFunctions
+        Public Shared Sub btnNavPrev_Click(currentForm)
+            Dim newForm As Type = navStackPrev.Pop()
+            navStackNext.Push(currentForm.GetType)
+            loadNewForm(currentForm, CType(Activator.CreateInstance(newForm), Form))
+        End Sub
+        Public Shared Sub btnNavNext_Click(currentForm)
+            Dim newForm As Type = navStackNext.Pop()
+            navStackPrev.Push(currentForm.GetType)
+            loadNewForm(currentForm, CType(Activator.CreateInstance(newForm), Form))
+        End Sub
+    End Class
+
+
 End Module
