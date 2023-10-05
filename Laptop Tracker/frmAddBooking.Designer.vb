@@ -24,9 +24,6 @@ Partial Class frmAddBooking
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAddBooking))
         Me.btnSubmit = New System.Windows.Forms.Button()
         Me.lblUsage = New System.Windows.Forms.Label()
@@ -186,39 +183,15 @@ Partial Class frmAddBooking
         Me.grdDevices.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.grdDevices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.grdDevices.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Futura Bk BT", 10.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdDevices.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.grdDevices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdDevices.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.model, Me.deviceName, Me.serialNumber})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Futura Bk BT", 10.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdDevices.DefaultCellStyle = DataGridViewCellStyle3
         Me.grdDevices.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grdDevices.Location = New System.Drawing.Point(897, 3)
         Me.grdDevices.Name = "grdDevices"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Futura Bk BT", 10.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdDevices.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.grdDevices.RowHeadersVisible = False
         Me.grdDevices.RowHeadersWidth = 82
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Futura Bk BT", 10.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grdDevices.RowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Futura Bk BT", 10.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grdDevices.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.grdDevices.RowTemplate.Height = 33
         Me.grdDevices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.grdDevices.Size = New System.Drawing.Size(888, 435)
@@ -232,7 +205,7 @@ Partial Class frmAddBooking
         Me.id.MinimumWidth = 50
         Me.id.Name = "id"
         Me.id.ReadOnly = True
-        Me.id.Width = 89
+        Me.id.Width = 77
         '
         'model
         '
@@ -241,7 +214,7 @@ Partial Class frmAddBooking
         Me.model.MinimumWidth = 100
         Me.model.Name = "model"
         Me.model.ReadOnly = True
-        Me.model.Width = 139
+        Me.model.Width = 115
         '
         'deviceName
         '
@@ -250,7 +223,7 @@ Partial Class frmAddBooking
         Me.deviceName.MinimumWidth = 100
         Me.deviceName.Name = "deviceName"
         Me.deviceName.ReadOnly = True
-        Me.deviceName.Width = 138
+        Me.deviceName.Width = 114
         '
         'serialNumber
         '
@@ -259,7 +232,7 @@ Partial Class frmAddBooking
         Me.serialNumber.MinimumWidth = 100
         Me.serialNumber.Name = "serialNumber"
         Me.serialNumber.ReadOnly = True
-        Me.serialNumber.Width = 244
+        Me.serialNumber.Width = 189
         '
         'txtDeviceID
         '
