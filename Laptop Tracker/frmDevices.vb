@@ -3,6 +3,7 @@
 Public Class frmDevices
 
     Private Sub frmDevices_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        displayNavItems(mnuNav)
         Dim deviceFileLength = File.ReadAllLines("devices.csv").Length
         Dim device As New Devices
         Using sr As New StreamReader("devices.csv")
@@ -14,8 +15,8 @@ Public Class frmDevices
                     .name = splitLine(1).Replace("&comma;", ",") 'Replaces the formatted comma to display correctly
                     .model = splitLine(2).Replace("&comma;", ",")
                     .serialNumber = splitLine(3).Replace("&comma;", ",")
-                    .usage = splitLine(4).Replace("&comma;", ",")
-                    grdDevices.Rows.Add(.id, .name, .model, .serialNumber, .usage)
+                    .status = splitLine(4).Replace("&comma;", ",")
+                    grdDevices.Rows.Add(.id, .name, .model, .serialNumber, .status)
                 End With
             Next
         End Using
@@ -69,4 +70,11 @@ Public Class frmDevices
             End If
         End With
     End Sub
+
+    Private Sub UsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsersToolStripMenuItem.Click
+        navStackPrev.Push([GetType])
+        navStackNext.Clear()
+        loadNewForm(Me, frmUsers)
+    End Sub
+
 End Class

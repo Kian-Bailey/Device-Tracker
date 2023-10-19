@@ -2,6 +2,7 @@
 
 Public Class frmAddBooking
     Private Sub frmAddBooking_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        displayNavItems(mnuNav)
         ResetFields()
     End Sub
 
@@ -164,5 +165,11 @@ Public Class frmAddBooking
                 .BackColor = Color.FromArgb(44, 158, 221)
             End If
         End With
+    End Sub
+
+    Private Sub UsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsersToolStripMenuItem.Click
+        navStackPrev.Push([GetType])
+        navStackNext.Clear()
+        loadNewForm(Me, frmUsers)
     End Sub
 End Class

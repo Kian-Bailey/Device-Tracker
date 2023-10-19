@@ -53,4 +53,24 @@
         navStackNext.Clear()
         loadNewForm(Me, frmDevices)
     End Sub
+
+    Private Sub frmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        displayNavItems(mnuNav)
+        If isUserAdmin = False Then
+            tlpMain.ColumnCount = 2
+            btnUsers.Visible = False
+        End If
+    End Sub
+
+    Private Sub UsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsersToolStripMenuItem.Click
+        navStackPrev.Push([GetType])
+        navStackNext.Clear()
+        loadNewForm(Me, frmUsers)
+    End Sub
+
+    Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
+        navStackPrev.Push([GetType])
+        navStackNext.Clear()
+        loadNewForm(Me, frmUsers)
+    End Sub
 End Class

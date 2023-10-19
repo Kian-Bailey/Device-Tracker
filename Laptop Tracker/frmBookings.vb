@@ -8,6 +8,7 @@ Public Class frmBookings
     End Sub
 
     Private Sub frmBookings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        displayNavItems(mnuNav)
         Dim deviceFileLength = File.ReadAllLines("bookings.csv").Length
         Dim booking As New Bookings
         Using sr As New StreamReader("bookings.csv")
@@ -69,5 +70,11 @@ Public Class frmBookings
                 .BackColor = Color.FromArgb(44, 158, 221)
             End If
         End With
+    End Sub
+
+    Private Sub UsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsersToolStripMenuItem.Click
+        navStackPrev.Push([GetType])
+        navStackNext.Clear()
+        loadNewForm(Me, frmUsers)
     End Sub
 End Class

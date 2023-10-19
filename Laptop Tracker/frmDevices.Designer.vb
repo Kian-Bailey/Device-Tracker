@@ -22,8 +22,8 @@ Partial Class frmDevices
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDevices))
         Me.btnAddDevice = New System.Windows.Forms.Button()
         Me.grdDevices = New System.Windows.Forms.DataGridView()
@@ -42,6 +42,7 @@ Partial Class frmDevices
         Me.btnNavNext = New System.Windows.Forms.Button()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.lblDevices = New System.Windows.Forms.Label()
+        Me.UsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.grdDevices, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.mnuNav.SuspendLayout()
         Me.tlpNav.SuspendLayout()
@@ -68,24 +69,24 @@ Partial Class frmDevices
         '
         Me.grdDevices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.grdDevices.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Futura Bk BT", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdDevices.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Futura Bk BT", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdDevices.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.grdDevices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdDevices.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.model, Me.deviceName, Me.serialNumber, Me.status})
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Futura Bk BT", 16.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdDevices.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Futura Bk BT", 16.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdDevices.DefaultCellStyle = DataGridViewCellStyle6
         Me.grdDevices.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grdDevices.Location = New System.Drawing.Point(53, 203)
         Me.grdDevices.Name = "grdDevices"
@@ -150,7 +151,7 @@ Partial Class frmDevices
         Me.mnuNav.Font = New System.Drawing.Font("Futura Bk BT", 10.125!)
         Me.mnuNav.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.mnuNav.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.mnuNav.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.BookingsToolStripMenuItem, Me.DevicesToolStripMenuItem})
+        Me.mnuNav.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.BookingsToolStripMenuItem, Me.DevicesToolStripMenuItem, Me.UsersToolStripMenuItem})
         Me.mnuNav.Location = New System.Drawing.Point(200, 0)
         Me.mnuNav.Name = "mnuNav"
         Me.mnuNav.Size = New System.Drawing.Size(1594, 94)
@@ -281,6 +282,12 @@ Partial Class frmDevices
         Me.lblDevices.Text = "Devices"
         Me.lblDevices.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'UsersToolStripMenuItem
+        '
+        Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(98, 90)
+        Me.UsersToolStripMenuItem.Text = "Users"
+        '
         'frmDevices
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(192.0!, 192.0!)
@@ -322,4 +329,5 @@ Partial Class frmDevices
     Friend WithEvents btnNavPrev As Button
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents lblDevices As Label
+    Friend WithEvents UsersToolStripMenuItem As ToolStripMenuItem
 End Class

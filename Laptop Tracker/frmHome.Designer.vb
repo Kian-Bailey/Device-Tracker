@@ -23,39 +23,43 @@ Partial Class frmHome
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmHome))
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.tlpMain = New System.Windows.Forms.TableLayoutPanel()
         Me.btnDevices = New System.Windows.Forms.Button()
         Me.btnBookings = New System.Windows.Forms.Button()
+        Me.btnUsers = New System.Windows.Forms.Button()
         Me.tlpNav = New System.Windows.Forms.TableLayoutPanel()
         Me.btnNavPrev = New System.Windows.Forms.Button()
         Me.mnuNav = New System.Windows.Forms.MenuStrip()
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BookingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DevicesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.btnNavNext = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.tlpMain.SuspendLayout()
         Me.tlpNav.SuspendLayout()
         Me.mnuNav.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TableLayoutPanel1
+        'tlpMain
         '
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.btnDevices, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnBookings, 0, 1)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.Padding = New System.Windows.Forms.Padding(100)
-        Me.TableLayoutPanel1.RowCount = 3
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 300.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1894, 1009)
-        Me.TableLayoutPanel1.TabIndex = 2
+        Me.tlpMain.ColumnCount = 3
+        Me.tlpMain.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.tlpMain.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.tlpMain.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.tlpMain.Controls.Add(Me.btnDevices, 1, 1)
+        Me.tlpMain.Controls.Add(Me.btnBookings, 0, 1)
+        Me.tlpMain.Controls.Add(Me.btnUsers, 2, 1)
+        Me.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tlpMain.Location = New System.Drawing.Point(0, 0)
+        Me.tlpMain.Name = "tlpMain"
+        Me.tlpMain.Padding = New System.Windows.Forms.Padding(100)
+        Me.tlpMain.RowCount = 3
+        Me.tlpMain.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tlpMain.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 300.0!))
+        Me.tlpMain.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tlpMain.Size = New System.Drawing.Size(1894, 1009)
+        Me.tlpMain.TabIndex = 2
         '
         'btnDevices
         '
@@ -64,10 +68,10 @@ Partial Class frmHome
         Me.btnDevices.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDevices.Font = New System.Drawing.Font("Futura Bk BT", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDevices.ForeColor = System.Drawing.Color.White
-        Me.btnDevices.Location = New System.Drawing.Point(967, 374)
+        Me.btnDevices.Location = New System.Drawing.Point(684, 374)
         Me.btnDevices.Margin = New System.Windows.Forms.Padding(20)
         Me.btnDevices.Name = "btnDevices"
-        Me.btnDevices.Size = New System.Drawing.Size(807, 260)
+        Me.btnDevices.Size = New System.Drawing.Size(524, 260)
         Me.btnDevices.TabIndex = 1
         Me.btnDevices.Text = "Devices"
         Me.btnDevices.UseVisualStyleBackColor = False
@@ -83,10 +87,25 @@ Partial Class frmHome
         Me.btnBookings.Location = New System.Drawing.Point(120, 374)
         Me.btnBookings.Margin = New System.Windows.Forms.Padding(20)
         Me.btnBookings.Name = "btnBookings"
-        Me.btnBookings.Size = New System.Drawing.Size(807, 260)
+        Me.btnBookings.Size = New System.Drawing.Size(524, 260)
         Me.btnBookings.TabIndex = 0
         Me.btnBookings.Text = "Bookings"
         Me.btnBookings.UseVisualStyleBackColor = False
+        '
+        'btnUsers
+        '
+        Me.btnUsers.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.btnUsers.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUsers.Font = New System.Drawing.Font("Futura Bk BT", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUsers.ForeColor = System.Drawing.Color.White
+        Me.btnUsers.Location = New System.Drawing.Point(1248, 374)
+        Me.btnUsers.Margin = New System.Windows.Forms.Padding(20)
+        Me.btnUsers.Name = "btnUsers"
+        Me.btnUsers.Size = New System.Drawing.Size(526, 260)
+        Me.btnUsers.TabIndex = 2
+        Me.btnUsers.Text = "Users"
+        Me.btnUsers.UseVisualStyleBackColor = False
         '
         'tlpNav
         '
@@ -131,7 +150,7 @@ Partial Class frmHome
         Me.mnuNav.Font = New System.Drawing.Font("Futura Bk BT", 10.125!)
         Me.mnuNav.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.mnuNav.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.mnuNav.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.BookingsToolStripMenuItem, Me.DevicesToolStripMenuItem})
+        Me.mnuNav.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.BookingsToolStripMenuItem, Me.DevicesToolStripMenuItem, Me.UsersToolStripMenuItem})
         Me.mnuNav.Location = New System.Drawing.Point(200, 0)
         Me.mnuNav.Name = "mnuNav"
         Me.mnuNav.Size = New System.Drawing.Size(1594, 94)
@@ -159,6 +178,12 @@ Partial Class frmHome
         Me.DevicesToolStripMenuItem.Name = "DevicesToolStripMenuItem"
         Me.DevicesToolStripMenuItem.Size = New System.Drawing.Size(124, 90)
         Me.DevicesToolStripMenuItem.Text = "Devices"
+        '
+        'UsersToolStripMenuItem
+        '
+        Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(98, 90)
+        Me.UsersToolStripMenuItem.Text = "Users"
         '
         'Button3
         '
@@ -199,14 +224,14 @@ Partial Class frmHome
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1894, 1009)
         Me.Controls.Add(Me.tlpNav)
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.tlpMain)
         Me.Font = New System.Drawing.Font("Futura Bk BT", 7.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MinimumSize = New System.Drawing.Size(700, 350)
+        Me.MinimumSize = New System.Drawing.Size(1300, 600)
         Me.Name = "frmHome"
         Me.Text = "Home"
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
+        Me.tlpMain.ResumeLayout(False)
+        Me.tlpMain.PerformLayout()
         Me.tlpNav.ResumeLayout(False)
         Me.tlpNav.PerformLayout()
         Me.mnuNav.ResumeLayout(False)
@@ -215,7 +240,7 @@ Partial Class frmHome
 
     End Sub
 
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents tlpMain As TableLayoutPanel
     Friend WithEvents btnBookings As Button
     Friend WithEvents btnDevices As Button
     Friend WithEvents tlpNav As TableLayoutPanel
@@ -226,4 +251,6 @@ Partial Class frmHome
     Friend WithEvents DevicesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button3 As Button
     Friend WithEvents btnNavNext As Button
+    Friend WithEvents UsersToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnUsers As Button
 End Class

@@ -47,13 +47,14 @@ Partial Class frmAddBooking
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BookingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DevicesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
-        Me.tlpMenu = New System.Windows.Forms.TableLayoutPanel()
+        Me.tlpNav = New System.Windows.Forms.TableLayoutPanel()
         Me.btnNavNext = New System.Windows.Forms.Button()
         Me.btnNavPrev = New System.Windows.Forms.Button()
         CType(Me.grdDevices, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,7 +65,7 @@ Partial Class frmAddBooking
         Me.TableLayoutPanel5.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel6.SuspendLayout()
-        Me.tlpMenu.SuspendLayout()
+        Me.tlpNav.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnSubmit
@@ -260,7 +261,7 @@ Partial Class frmAddBooking
         Me.mnuNav.Font = New System.Drawing.Font("Futura Bk BT", 10.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.mnuNav.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.mnuNav.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.mnuNav.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.BookingsToolStripMenuItem, Me.DevicesToolStripMenuItem})
+        Me.mnuNav.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.BookingsToolStripMenuItem, Me.DevicesToolStripMenuItem, Me.UsersToolStripMenuItem})
         Me.mnuNav.Location = New System.Drawing.Point(200, 0)
         Me.mnuNav.Name = "mnuNav"
         Me.mnuNav.Size = New System.Drawing.Size(1588, 94)
@@ -284,6 +285,12 @@ Partial Class frmAddBooking
         Me.DevicesToolStripMenuItem.Name = "DevicesToolStripMenuItem"
         Me.DevicesToolStripMenuItem.Size = New System.Drawing.Size(124, 90)
         Me.DevicesToolStripMenuItem.Text = "Devices"
+        '
+        'UsersToolStripMenuItem
+        '
+        Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(98, 90)
+        Me.UsersToolStripMenuItem.Text = "Users"
         '
         'TableLayoutPanel1
         '
@@ -380,7 +387,7 @@ Partial Class frmAddBooking
         Me.TableLayoutPanel6.ColumnCount = 1
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel6.Controls.Add(Me.TableLayoutPanel1, 0, 1)
-        Me.TableLayoutPanel6.Controls.Add(Me.tlpMenu, 0, 0)
+        Me.TableLayoutPanel6.Controls.Add(Me.tlpNav, 0, 0)
         Me.TableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel6.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
@@ -390,23 +397,23 @@ Partial Class frmAddBooking
         Me.TableLayoutPanel6.Size = New System.Drawing.Size(1894, 1009)
         Me.TableLayoutPanel6.TabIndex = 16
         '
-        'tlpMenu
+        'tlpNav
         '
-        Me.tlpMenu.ColumnCount = 4
-        Me.tlpMenu.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
-        Me.tlpMenu.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
-        Me.tlpMenu.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpMenu.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
-        Me.tlpMenu.Controls.Add(Me.btnNavNext, 1, 0)
-        Me.tlpMenu.Controls.Add(Me.btnNavPrev, 0, 0)
-        Me.tlpMenu.Controls.Add(Me.mnuNav, 2, 0)
-        Me.tlpMenu.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tlpMenu.Location = New System.Drawing.Point(3, 3)
-        Me.tlpMenu.Name = "tlpMenu"
-        Me.tlpMenu.RowCount = 1
-        Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpMenu.Size = New System.Drawing.Size(1888, 94)
-        Me.tlpMenu.TabIndex = 16
+        Me.tlpNav.ColumnCount = 4
+        Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
+        Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
+        Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
+        Me.tlpNav.Controls.Add(Me.btnNavNext, 1, 0)
+        Me.tlpNav.Controls.Add(Me.btnNavPrev, 0, 0)
+        Me.tlpNav.Controls.Add(Me.mnuNav, 2, 0)
+        Me.tlpNav.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tlpNav.Location = New System.Drawing.Point(3, 3)
+        Me.tlpNav.Name = "tlpNav"
+        Me.tlpNav.RowCount = 1
+        Me.tlpNav.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tlpNav.Size = New System.Drawing.Size(1888, 94)
+        Me.tlpNav.TabIndex = 16
         '
         'btnNavNext
         '
@@ -463,8 +470,8 @@ Partial Class frmAddBooking
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
         Me.TableLayoutPanel6.ResumeLayout(False)
-        Me.tlpMenu.ResumeLayout(False)
-        Me.tlpMenu.PerformLayout()
+        Me.tlpNav.ResumeLayout(False)
+        Me.tlpNav.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -497,7 +504,8 @@ Partial Class frmAddBooking
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
-    Friend WithEvents tlpMenu As TableLayoutPanel
+    Friend WithEvents tlpNav As TableLayoutPanel
     Friend WithEvents btnNavPrev As Button
     Friend WithEvents btnNavNext As Button
+    Friend WithEvents UsersToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -22,8 +22,8 @@ Partial Class frmBookings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBookings))
         Me.grdBookings = New System.Windows.Forms.DataGridView()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,9 +38,10 @@ Partial Class frmBookings
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BookingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DevicesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.tlpNav = New System.Windows.Forms.TableLayoutPanel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.btnNavNext = New System.Windows.Forms.Button()
         Me.btnNavPrev = New System.Windows.Forms.Button()
@@ -48,31 +49,31 @@ Partial Class frmBookings
         Me.mnuNav.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
-        Me.TableLayoutPanel3.SuspendLayout()
+        Me.tlpNav.SuspendLayout()
         Me.SuspendLayout()
         '
         'grdBookings
         '
         Me.grdBookings.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.grdBookings.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Futura Bk BT", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdBookings.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Futura Bk BT", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdBookings.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.grdBookings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdBookings.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.dateStart, Me.dateEnd, Me.usedBy, Me.description, Me.deviceID})
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Futura Bk BT", 16.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdBookings.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Futura Bk BT", 16.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdBookings.DefaultCellStyle = DataGridViewCellStyle2
         Me.grdBookings.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grdBookings.Location = New System.Drawing.Point(3, 153)
         Me.grdBookings.Name = "grdBookings"
@@ -173,7 +174,7 @@ Partial Class frmBookings
         Me.mnuNav.Font = New System.Drawing.Font("Futura Bk BT", 10.125!)
         Me.mnuNav.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.mnuNav.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.mnuNav.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.BookingsToolStripMenuItem, Me.DevicesToolStripMenuItem})
+        Me.mnuNav.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.BookingsToolStripMenuItem, Me.DevicesToolStripMenuItem, Me.UsersToolStripMenuItem})
         Me.mnuNav.Location = New System.Drawing.Point(200, 0)
         Me.mnuNav.Name = "mnuNav"
         Me.mnuNav.Size = New System.Drawing.Size(1588, 94)
@@ -201,6 +202,13 @@ Partial Class frmBookings
         Me.DevicesToolStripMenuItem.Size = New System.Drawing.Size(124, 90)
         Me.DevicesToolStripMenuItem.Text = "Devices"
         '
+        'UsersToolStripMenuItem
+        '
+        Me.UsersToolStripMenuItem.ForeColor = System.Drawing.Color.Black
+        Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(98, 90)
+        Me.UsersToolStripMenuItem.Text = "Users"
+        '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 1
@@ -225,7 +233,7 @@ Partial Class frmBookings
         Me.TableLayoutPanel2.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel2.ColumnCount = 1
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel3, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.tlpNav, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel1, 0, 1)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.ForeColor = System.Drawing.Color.Transparent
@@ -237,25 +245,25 @@ Partial Class frmBookings
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(1894, 1009)
         Me.TableLayoutPanel2.TabIndex = 6
         '
-        'TableLayoutPanel3
+        'tlpNav
         '
-        Me.TableLayoutPanel3.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.TableLayoutPanel3.ColumnCount = 4
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.mnuNav)
-        Me.TableLayoutPanel3.Controls.Add(Me.Button3)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnNavNext, 1, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnNavPrev, 0, 0)
-        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 3)
-        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 1
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(1888, 94)
-        Me.TableLayoutPanel3.TabIndex = 0
+        Me.tlpNav.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.tlpNav.ColumnCount = 4
+        Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
+        Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
+        Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
+        Me.tlpNav.Controls.Add(Me.mnuNav)
+        Me.tlpNav.Controls.Add(Me.Button3)
+        Me.tlpNav.Controls.Add(Me.btnNavNext, 1, 0)
+        Me.tlpNav.Controls.Add(Me.btnNavPrev, 0, 0)
+        Me.tlpNav.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tlpNav.Location = New System.Drawing.Point(3, 3)
+        Me.tlpNav.Name = "tlpNav"
+        Me.tlpNav.RowCount = 1
+        Me.tlpNav.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tlpNav.Size = New System.Drawing.Size(1888, 94)
+        Me.tlpNav.TabIndex = 0
         '
         'Button3
         '
@@ -323,8 +331,8 @@ Partial Class frmBookings
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.TableLayoutPanel3.ResumeLayout(False)
-        Me.TableLayoutPanel3.PerformLayout()
+        Me.tlpNav.ResumeLayout(False)
+        Me.tlpNav.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -344,8 +352,9 @@ Partial Class frmBookings
     Friend WithEvents DevicesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
+    Friend WithEvents tlpNav As TableLayoutPanel
     Friend WithEvents btnNavPrev As Button
     Friend WithEvents btnNavNext As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents UsersToolStripMenuItem As ToolStripMenuItem
 End Class

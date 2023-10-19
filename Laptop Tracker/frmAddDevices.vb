@@ -31,6 +31,7 @@ Public Class frmAddDevices
     End Sub
 
     Private Sub frmAddDevices_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        displayNavItems(mnuNav)
         resetFields()
     End Sub
 
@@ -86,5 +87,11 @@ Public Class frmAddDevices
                 .BackColor = Color.FromArgb(44, 158, 221)
             End If
         End With
+    End Sub
+
+    Private Sub UsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsersToolStripMenuItem.Click
+        navStackPrev.Push([GetType])
+        navStackNext.Clear()
+        loadNewForm(Me, frmUsers)
     End Sub
 End Class
