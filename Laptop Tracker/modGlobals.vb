@@ -3,14 +3,93 @@ Imports System.Runtime.InteropServices.WindowsRuntime
 Imports System.Security.Cryptography
 
 Friend Module GlobalStructures
-    Public Structure Devices 'Structure to hold device information
+    Public Class Devices 'Structure to hold device information
         Public id As Integer
         Public model As String
-        Public name As String
         Public serialNumber As String
         Public status As String
-    End Structure
+        Public deviceType As String
+        Public Overridable Function setLineOutput(id As Integer, model As String, serialNumber As String, Status As String)
+            Dim lineOutput As String = $"{ id }, Other,{ model },{ serialNumber },{ Status}"
+            Return lineOutput
+        End Function
 
+    End Class
+    Public Class Computers
+        Inherits Devices
+        Public name As String
+        Protected Sub New() 'prevents creating an instance of computer, must be either laptop or desktop
+        End Sub
+    End Class
+    Public Class Laptops
+        Inherits Computers
+
+        Public processor As String
+        Public ram As String
+        Public screenSize As String
+
+        Public Overloads Function setLineOutput(id As Integer, model As String, serialNumber As String, Status As String, name As String, processor As String, ram As String, screenSize As String)
+            Dim lineOutput As String = $"{ id }, Laptop,{ model },{ serialNumber },{ Status},{ name },{ processor },{ ram },{ screenSize }"
+            Return lineOutput
+        End Function
+    End Class
+
+    Public Class Desktops
+        Inherits Computers
+        Public Sub New()
+            status = "Non-Bookable"
+        End Sub
+        Public Overloads Function setLineOutput(id As Integer, model As String, serialNumber As String, name As String)
+            Dim lineOutput As String = $"{ id }, Desktop,{ model },{ serialNumber },{ status},{ name }"
+            Return lineOutput
+        End Function
+    End Class
+
+    Public Class Cameras
+        Inherits Devices
+        Public cameraResolution As String
+        Public Overloads Function setLineOutput(id As Integer, model As String, serialNumber As String, status As String, cameraResolution As String)
+            Dim lineOutput As String = $"{ id }, Camera,{ model },{ serialNumber },{ status},{ cameraResolution}"
+            Return lineOutput
+        End Function
+    End Class
+
+    Public Class MobilePhones
+        Inherits Devices
+        Public cameraResolution As String
+        Public phoneNumber As String
+        Public Overloads Function setLineOutput(id As Integer, model As String, serialNumber As String, Status As String, cameraResolution As String, phoneNumber As String)
+            Dim lineOutput As String = $"{ id }, Mobile Phone,{ model },{ serialNumber },{ Status},{ cameraResolution},{phoneNumber}"
+            Return lineOutput
+        End Function
+    End Class
+
+    Public Class Televisions
+        Inherits Devices
+        Public isSmart As Boolean
+        Public screenSize As String
+        Public Sub New()
+            status = "Non-Bookable"
+        End Sub
+        Public Overloads Function setLineOutput(id As Integer, model As String, serialNumber As String, screenSize As String, isSmart As String)
+            Dim lineOutput As String = $"{ id }, TV,{ model },{ serialNumber },{ status},{ screenSize},{isSmart}"
+            Return lineOutput
+        End Function
+    End Class
+
+    Public Class Printers
+        Inherits Devices
+        Public inkModel As String
+        Public linkToInk As String
+        Public Sub New()
+            status = "Non-Bookable"
+        End Sub
+
+        Public Overloads Function setLineOutput(id As Integer, model As String, serialNumber As String, inkModel As String, linkToInk As String)
+            Dim lineOutput As String = $"{ id }, Printer,{ model },{ serialNumber },{ status},{ inkModel},{linkToInk}"
+            Return lineOutput
+        End Function
+    End Class
 
 
     Public Structure Bookings ' Structure to hold booking information

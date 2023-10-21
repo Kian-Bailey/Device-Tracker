@@ -12,14 +12,15 @@ Public Class frmDevices
                 Dim splitLine As String() = deviceLine.Split(",")
                 With device
                     .id = splitLine(0)
-                    .name = splitLine(1).Replace("&comma;", ",") 'Replaces the formatted comma to display correctly
+                    .deviceType = splitLine(1).Replace("&comma;", ",") 'Replaces the formatted comma to display correctly
                     .model = splitLine(2).Replace("&comma;", ",")
                     .serialNumber = splitLine(3).Replace("&comma;", ",")
                     .status = splitLine(4).Replace("&comma;", ",")
-                    grdDevices.Rows.Add(.id, .name, .model, .serialNumber, .status)
+                    grdDevices.Rows.Add(.id, .deviceType, .model, .serialNumber, .status)
                 End With
             Next
         End Using
+
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click

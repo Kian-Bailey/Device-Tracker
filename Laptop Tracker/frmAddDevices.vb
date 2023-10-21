@@ -1,30 +1,52 @@
 ﻿Imports System.IO
 
 Public Class frmAddDevices
+    Private Sub tbcInputs_TabIndexChanged(sender As Object, e As EventArgs) Handles tbcInputs.TabIndexChanged
+
+    End Sub
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
-        'Check if all necessary fields are filled
-        If txtModel.Text = "" Or txtName.Text = "" Or txtSerialNumber.Text = "" Or comUsage.Text = "" Then
-            MsgBox("Error: Empty Fields." & vbNewLine &
-                   "Please make sure you have filled in all of the fields" & vbNewLine &
-                   "The device has NOT been saved.", MsgBoxStyle.Critical, "Error")
-            resetFields()
-            Exit Sub
-        End If
-        Dim device As New Devices
-        Dim sw As New StreamWriter("devices.csv", True)
-        With device
-            .id = txtDeviceID.Text
-            .model = txtModel.Text.Replace(",", "&comma;") 'Ensures that the format of the CSV functions correctly
-            .name = txtName.Text.Replace(",", "&comma;")
-            .serialNumber = txtSerialNumber.Text.Replace(",", "&comma;")
-            .usage = comUsage.Text.Replace(",", "&comma;")
-
-            'Converts the fields into a formatted string
-            Dim lineOutput As String = $"{ .id },{ .model },{ .name },{ .serialNumber },{ .usage}"
-            sw.WriteLine(lineOutput) 'Writes the line to the file
-
-
+        Dim activeDGV As DataGridView = (tbcInputs.SelectedTab.Controls.OfType(Of DataGridView))(0)
+        Dim lineOutput As String
+        With activeDGV.Rows(0)
+            Dim id As Integer = .Cells(0).Value
+            Dim model As String = .Cells(1).Value.ToString
+            Dim serialNumber As String = .Cells(2).Value.ToString
+            Dim status As String = .Cells(3).Value.ToString
+            If model = "" Or serialNumber = "" Or status = "" Then
+                MsgBox("Error: Empty Fields." & vbNewLine &
+                   "Please make sure you have filled in the device model, serial number and status" & vbNewLine &
+                           "The device has NOT been saved.", MsgBoxStyle.Critical, "Error")
+                resetFields()
+                Exit Sub
+            End If
+            Select Case tbcInputs.SelectedTab.Text
+                Case "Laptop"
+                    Dim laptop As New Laptops
+                    lineOutput = laptop.setLineOutput(id, model, serialNumber, status, .Cells("deviceName").Value.ToString, .Cells("processor").Value.ToString, .Cells("ram").Value.ToString, .Cells("screenSize").Value.ToString)
+                Case "Desktop"
+                    Dim desktop As New Desktops
+                    lineOutput = desktop.setLineOutput(id, model, serialNumber, .Cells(3).Value.ToString)
+                Case "Camera"
+                    Dim camera As New Cameras
+                    lineOutput = camera.setLineOutput(id, model, serialNumber, status, .Cells(4).Value.ToString)
+                Case "Mobile Phone"
+                    Dim mobilePhone As New MobilePhones
+                    lineOutput = mobilePhone.setLineOutput(id, model, serialNumber, status, .Cells(4).Value.ToString, .Cells(5).Value.ToString)
+                Case "TV"
+                    Dim tv As New Televisions
+                    tv.isSmart = CBool(.Cells(4).Value)
+                    lineOutput = tv.setLineOutput(id, model, serialNumber, .Cells(3).Value.ToString, tv.isSmart)
+                Case "Printer"
+                    Dim printer As New Printers
+                    lineOutput = printer.setLineOutput(id, model, serialNumber, .Cells(3).Value.ToString, .Cells(4).Value.ToString)
+                Case Else
+                    Dim device As New Devices
+                    lineOutput = device.setLineOutput(id, model, serialNumber, status)
+            End Select
         End With
+        Dim sw As New StreamWriter("devices.csv", True)
+
+        sw.WriteLine(lineOutput) 'Writes the line to the file
         MsgBox("Device Added")
         sw.Close()
         resetFields()
@@ -36,11 +58,12 @@ Public Class frmAddDevices
     End Sub
 
     Private Sub resetFields() 'resets all input fields and loads default values
-        txtDeviceID.Text = GetLastID("devices.csv")
-        txtModel.Text = ""
-        txtName.Text = ""
-        txtSerialNumber.Text = ""
-        comUsage.SelectedIndex = -1
+        For Each tabPage As TabPage In tbcInputs.Controls.OfType(Of TabPage)
+            For Each inputGrid As DataGridView In tabPage.Controls.OfType(Of DataGridView)
+                inputGrid.Rows.Clear()
+                inputGrid.Rows.Add(GetLastID("devices.csv"))
+            Next
+        Next
     End Sub
 
     Private Sub DevicesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DevicesToolStripMenuItem.Click

@@ -26,10 +26,10 @@ Public Class frmAddBooking
                     Dim deviceLine As String = srDevice.ReadLine
                     Dim deviceSplitLine As String() = deviceLine.Split(",") 'Retrieves fields for records
                     With device
-                        .usage = deviceSplitLine(4)
-                        If .usage = "Spare" Then
+                        .status = deviceSplitLine(4)
+                        If .status = "Spare" Then
                             .id = deviceSplitLine(0)
-                            .name = deviceSplitLine(1)
+                            .deviceType = deviceSplitLine(1)
                             .model = deviceSplitLine(2)
                             .serialNumber = deviceSplitLine(3)
                             Dim bookingFileLength = File.ReadAllLines("bookings.csv").Length
@@ -55,7 +55,7 @@ Public Class frmAddBooking
                                 Next
                             End Using
                             If Not inUse Then 'Adds device details of devices that are Spare and are not in use during selected dates
-                                grdDevices.Rows.Add(device.id, device.name, device.model,
+                                grdDevices.Rows.Add(device.id, device.deviceType, device.model,
                                                     device.serialNumber)
                             End If
                         End If
