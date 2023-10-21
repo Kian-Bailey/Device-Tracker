@@ -22,27 +22,27 @@ Partial Class frmDevices
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDevices))
         Me.btnAddDevice = New System.Windows.Forms.Button()
         Me.grdDevices = New System.Windows.Forms.DataGridView()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.model = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.deviceName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.serialNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.status = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.mnuNav = New System.Windows.Forms.MenuStrip()
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BookingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DevicesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tlpNav = New System.Windows.Forms.TableLayoutPanel()
         Me.btnNavPrev = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.btnNavNext = New System.Windows.Forms.Button()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.lblDevices = New System.Windows.Forms.Label()
-        Me.UsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.deviceType = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.model = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.serialNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.grdDevices, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.mnuNav.SuspendLayout()
         Me.tlpNav.SuspendLayout()
@@ -69,24 +69,24 @@ Partial Class frmDevices
         '
         Me.grdDevices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.grdDevices.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Futura Bk BT", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdDevices.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Futura Bk BT", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdDevices.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.grdDevices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grdDevices.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.model, Me.deviceName, Me.serialNumber, Me.status})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Futura Bk BT", 16.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdDevices.DefaultCellStyle = DataGridViewCellStyle6
+        Me.grdDevices.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.deviceType, Me.model, Me.serialNumber, Me.status})
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Futura Bk BT", 16.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdDevices.DefaultCellStyle = DataGridViewCellStyle2
         Me.grdDevices.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grdDevices.Location = New System.Drawing.Point(53, 203)
         Me.grdDevices.Name = "grdDevices"
@@ -95,54 +95,6 @@ Partial Class frmDevices
         Me.grdDevices.RowTemplate.Height = 33
         Me.grdDevices.Size = New System.Drawing.Size(1788, 459)
         Me.grdDevices.TabIndex = 2
-        '
-        'id
-        '
-        Me.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.id.Frozen = True
-        Me.id.HeaderText = "ID"
-        Me.id.MinimumWidth = 50
-        Me.id.Name = "id"
-        Me.id.ReadOnly = True
-        Me.id.Width = 117
-        '
-        'model
-        '
-        Me.model.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.model.HeaderText = "Model"
-        Me.model.MinimumWidth = 100
-        Me.model.Name = "model"
-        Me.model.ReadOnly = True
-        Me.model.Width = 201
-        '
-        'deviceName
-        '
-        Me.deviceName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.deviceName.HeaderText = "Name"
-        Me.deviceName.MinimumWidth = 100
-        Me.deviceName.Name = "deviceName"
-        Me.deviceName.ReadOnly = True
-        Me.deviceName.Width = 200
-        '
-        'serialNumber
-        '
-        Me.serialNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.serialNumber.HeaderText = "Serial Number"
-        Me.serialNumber.MinimumWidth = 100
-        Me.serialNumber.Name = "serialNumber"
-        Me.serialNumber.ReadOnly = True
-        Me.serialNumber.Width = 375
-        '
-        'status
-        '
-        Me.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.status.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
-        Me.status.HeaderText = "Status"
-        Me.status.Items.AddRange(New Object() {"Broken", "Desktop", "No Longer In Use", "Not In Use", "Permanent Use", "Spare", "To be Returned"})
-        Me.status.MinimumWidth = 100
-        Me.status.Name = "status"
-        Me.status.ReadOnly = True
-        Me.status.Width = 153
         '
         'mnuNav
         '
@@ -179,6 +131,12 @@ Partial Class frmDevices
         Me.DevicesToolStripMenuItem.Name = "DevicesToolStripMenuItem"
         Me.DevicesToolStripMenuItem.Size = New System.Drawing.Size(124, 90)
         Me.DevicesToolStripMenuItem.Text = "Devices"
+        '
+        'UsersToolStripMenuItem
+        '
+        Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(98, 90)
+        Me.UsersToolStripMenuItem.Text = "Users"
         '
         'tlpNav
         '
@@ -282,11 +240,51 @@ Partial Class frmDevices
         Me.lblDevices.Text = "Devices"
         Me.lblDevices.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'UsersToolStripMenuItem
+        'id
         '
-        Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
-        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(98, 90)
-        Me.UsersToolStripMenuItem.Text = "Users"
+        Me.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.id.Frozen = True
+        Me.id.HeaderText = "ID"
+        Me.id.MinimumWidth = 50
+        Me.id.Name = "id"
+        Me.id.ReadOnly = True
+        Me.id.Width = 117
+        '
+        'deviceType
+        '
+        Me.deviceType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.deviceType.HeaderText = "Device Type"
+        Me.deviceType.MinimumWidth = 10
+        Me.deviceType.Name = "deviceType"
+        Me.deviceType.ReadOnly = True
+        Me.deviceType.Width = 322
+        '
+        'model
+        '
+        Me.model.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.model.HeaderText = "Model"
+        Me.model.MinimumWidth = 100
+        Me.model.Name = "model"
+        Me.model.ReadOnly = True
+        Me.model.Width = 201
+        '
+        'serialNumber
+        '
+        Me.serialNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.serialNumber.HeaderText = "Serial Number"
+        Me.serialNumber.MinimumWidth = 100
+        Me.serialNumber.Name = "serialNumber"
+        Me.serialNumber.ReadOnly = True
+        Me.serialNumber.Width = 375
+        '
+        'status
+        '
+        Me.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.status.HeaderText = "Status"
+        Me.status.MinimumWidth = 10
+        Me.status.Name = "status"
+        Me.status.ReadOnly = True
+        Me.status.Width = 192
         '
         'frmDevices
         '
@@ -314,11 +312,6 @@ Partial Class frmDevices
 
     Friend WithEvents btnAddDevice As Button
     Friend WithEvents grdDevices As DataGridView
-    Friend WithEvents id As DataGridViewTextBoxColumn
-    Friend WithEvents model As DataGridViewTextBoxColumn
-    Friend WithEvents deviceName As DataGridViewTextBoxColumn
-    Friend WithEvents serialNumber As DataGridViewTextBoxColumn
-    Friend WithEvents status As DataGridViewComboBoxColumn
     Friend WithEvents mnuNav As MenuStrip
     Friend WithEvents HomeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BookingsToolStripMenuItem As ToolStripMenuItem
@@ -330,4 +323,9 @@ Partial Class frmDevices
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
     Friend WithEvents lblDevices As Label
     Friend WithEvents UsersToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents id As DataGridViewTextBoxColumn
+    Friend WithEvents deviceType As DataGridViewTextBoxColumn
+    Friend WithEvents model As DataGridViewTextBoxColumn
+    Friend WithEvents serialNumber As DataGridViewTextBoxColumn
+    Friend WithEvents status As DataGridViewTextBoxColumn
 End Class
