@@ -57,7 +57,26 @@ Public Class frmLogin
         End With
     End Sub
 
+    Sub launchHome()
+        With frmHome
+            If Screen.PrimaryScreen.Bounds.Height > 1080 Then
+                .Width = Screen.PrimaryScreen.Bounds.Width * 0.75
+                .Height = Screen.PrimaryScreen.Bounds.Height * 0.75
+                .WindowState = FormWindowState.Normal
+            Else
+                .WindowState = FormWindowState.Maximized
+            End If
+            .updateNavButtons()
+            .Show()
+        End With
+
+        Close()
+    End Sub
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        If verifyLoginDetails(txtEmail.Text, txtPassword.Text) Then launchHome()
+    End Sub
+    Public Function verifyLoginDetails(email As String, password As String) As Boolean
+
         Dim userFileLength = File.ReadAllLines("users.csv").Length
         Dim user As New Users
         Using sr As New StreamReader("users.csv")
@@ -68,34 +87,22 @@ Public Class frmLogin
                     .id = splitLine(0)
                     .encryptionKeyString = splitLine(1).Replace("&comma;", ",")
                     Dim encryptionKey As New Simple3Des(.encryptionKeyString)
-                    Dim inputEmailEncrypted = encryptionKey.EncryptData(txtEmail.Text.ToLower).Replace(",", "&comma;")
-                    Dim inputPasswordEncrypted = encryptionKey.EncryptData(txtPassword.Text).Replace(",", "&comma;")
+                    Dim inputEmailEncrypted = encryptionKey.EncryptData(email.ToLower).Replace(",", "&comma;")
+                    Dim inputPasswordEncrypted = encryptionKey.EncryptData(password.Replace(",", "&comma;"))
                     .email = splitLine(2)
                     .password = splitLine(3)
                     If inputEmailEncrypted = .email And inputPasswordEncrypted = .password Then
                         userName = encryptionKey.DecryptData(splitLine(4).Replace("&comma;", ","))
                         isUserAdmin = Convert.ToBoolean(encryptionKey.DecryptData(splitLine(6).Replace("&comma;", ",")))
-                        'Launch application in maximized state if screen width is not greater than 1080px
-                        With frmHome
-                            If Screen.PrimaryScreen.Bounds.Height > 1080 Then
-                                .Width = Screen.PrimaryScreen.Bounds.Width * 0.75
-                                .Height = Screen.PrimaryScreen.Bounds.Height * 0.75
-                                .WindowState = FormWindowState.Normal
-                            Else
-                                .WindowState = FormWindowState.Maximized
-                            End If
-                            .updateNavButtons()
-                            .Show()
-                        End With
-
-                        Close()
-                        Exit Sub
+                        Return True
                     End If
                 End With
             Next
         End Using
-        MsgBox("Email or password is incorrect")
-    End Sub
+        MsgBox("Email or password is incorrect.")
+        Return False
+    End Function
+
 
 
 End Class
