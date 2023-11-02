@@ -107,6 +107,7 @@ Public Class LoginTests
         Assert.IsFalse(result, $"Login should be not successful for Email: {email}, Password: {password}.")
     End Sub
 
+
     <TestMethod> Public Sub specialCharacterPassword()
         ' Arrange
         Dim loginForm As New frmLogin
@@ -148,8 +149,8 @@ Public Class LoginData
     Public Shared ReadOnly validEmail1 As String = "kian.bailey@sharpfutures.org.uk"
     Public Shared ReadOnly validPassword1 As String = "Password123!"
 
-    Public Shared ReadOnly validEmail2 As String = "valid@email.com"
-    Public Shared ReadOnly validPassword2 As String = "validPassword"
+    Public Shared ReadOnly validEmail2 As String = "test@gmail.com"
+    Public Shared ReadOnly validPassword2 As String = ",pass,word,"
 
     Public Shared ReadOnly invalidEmail As String = "invalid@email.com"
     Public Shared ReadOnly invalidPassword As String = "invalidPassword"
@@ -160,7 +161,7 @@ Public Class LoginData
     Public Shared ReadOnly validEmailIncorrectCasing As String = "kIan.baiLey@SharpFutuRes.org.uk"
     Public Shared ReadOnly validPasswordIncorrectCasing As String = "PassWorD123!"
 
-    Public Shared ReadOnly validEmailSpecialCharacter As String = "valid@gmail.com"
+    Public Shared ReadOnly validEmailSpecialCharacter As String = "test@gmail.com"
     Public Shared ReadOnly validPasswordSpecialCharacter As String = ",pass,word,"
 
 End Class
