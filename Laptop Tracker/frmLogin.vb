@@ -92,7 +92,6 @@ Public Class frmLogin
                     .email = splitLine(2)
                     .password = splitLine(3).Replace("&comma;", ",")
                     If inputEmailEncrypted = .email AndAlso inputPasswordEncrypted = .password Then
-                        If inputEmailEncrypted = .email AndAlso inputPasswordEncrypted = .password Then
                         userName = encryptionKey.DecryptData(splitLine(4).Replace("&comma;", ","))
                         isUserAdmin = Convert.ToBoolean(encryptionKey.DecryptData(splitLine(6).Replace("&comma;", ",")))
                         Return True
