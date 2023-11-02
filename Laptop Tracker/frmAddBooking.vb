@@ -9,7 +9,7 @@ Public Class frmAddBooking
     Private Sub ResetFields() 'resets all input fields and loads default values
         dtpStartDate.Value = Date.Today
         dtpEndDate.Value = DateAdd("ww", 1, Date.Today)
-        txtUser.Text = ""
+        txtUser.Text = userName
         txtDescription.Text = ""
         txtDeviceID.Text = ""
         txtDeviceName.Text = ""
