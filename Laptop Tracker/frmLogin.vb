@@ -88,7 +88,7 @@ Public Class frmLogin
                     .encryptionKeyString = splitLine(1).Replace("&comma;", ",")
                     Dim encryptionKey As New Simple3Des(.encryptionKeyString)
                     Dim inputEmailEncrypted = encryptionKey.EncryptData(email.ToLower).Replace(",", "&comma;")
-                    Dim inputPasswordEncrypted = encryptionKey.EncryptData(password.Replace(",", "&comma;"))
+                    Dim inputPasswordEncrypted = encryptionKey.EncryptData(password.Replace(",", "&comma;")).Replace(",", "&comma;")
                     .email = splitLine(2)
                     .password = splitLine(3).Replace("&comma;", ",")
                     If inputEmailEncrypted = .email AndAlso inputPasswordEncrypted = .password Then
